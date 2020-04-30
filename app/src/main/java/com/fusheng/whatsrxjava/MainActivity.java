@@ -9,6 +9,7 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.fusheng.whatsrxjava.operation.Create;
+import com.fusheng.whatsrxjava.operation.Transform;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Create create = new Create();
-        findViewById(R.id.tv_click).setOnClickListener(v -> create.intervalRange());
+//        Create create = new Create();
+        Transform transform = new Transform();
+        findViewById(R.id.tv_click).setOnClickListener(v -> transform.concatMap());
     }
 
     private void delay(){

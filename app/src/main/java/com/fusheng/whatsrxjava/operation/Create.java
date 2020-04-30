@@ -14,7 +14,7 @@ import io.reactivex.disposables.Disposable;
 /**
  * @author lixiaowei
  * @ date:2020/4/29 11:48
- * Description:RxJava创建操作符
+ * Description:RxJava创建操作符：create、just、fromArray、fromIterable、timer、interval、intervalRange、range、empty
  */
 public class Create {
     /**
