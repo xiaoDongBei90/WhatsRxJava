@@ -7,9 +7,9 @@ package com.fusheng.whatsrxjava;
  */
 public class Course {
     private String name;
-    private String score;
+    private int score;
 
-    public Course(String name, String score) {
+    public Course(String name, int score) {
         this.name = name;
         this.score = score;
     }
@@ -22,11 +22,11 @@ public class Course {
         return name;
     }
 
-    public void setScore(String score) {
+    public void setScore(int score) {
         this.score = score;
     }
 
-    public String getScore() {
+    public int getScore() {
         return score;
     }
 }

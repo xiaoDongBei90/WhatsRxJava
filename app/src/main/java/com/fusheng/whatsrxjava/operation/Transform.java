@@ -123,14 +123,14 @@ public class Transform {
     private List<Course> generateCourseList(int type) {
         List<Course> list = new ArrayList<>();
         if (type == 1) {
-            list.add(new Course("chinese", "76"));
-            list.add(new Course("english", "80"));
+            list.add(new Course("chinese", 76));
+            list.add(new Course("english", 80));
         } else if (type == 2) {
-            list.add(new Course("chinese", "88"));
-            list.add(new Course("math", "99"));
+            list.add(new Course("chinese", 88));
+            list.add(new Course("math", 99));
         } else if (type == 3) {
-            list.add(new Course("math", "30"));
-            list.add(new Course("english", "40"));
+            list.add(new Course("math", 30));
+            list.add(new Course("english", 40));
         }
         return list;
     }
