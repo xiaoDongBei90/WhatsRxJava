@@ -10,6 +10,7 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 
 /**
  * @author lixiaowei
@@ -263,6 +264,13 @@ public class Create {
      */
     public void intervalRange() {
         Observable.intervalRange(4, 5, 3, 1, TimeUnit.SECONDS)
+                .subscribe(new Consumer<Long>() {
+                    @Override
+                    public void accept(Long aLong) throws Exception {
+                        Log.d("lixiaowei", "accept------" + aLong);
+                    }
+                });
+       /* Observable.intervalRange(4, 5, 3, 1, TimeUnit.SECONDS)
                 .subscribe(new Observer<Long>() {
                     @Override
                     public void onSubscribe(Disposable d) {
@@ -283,7 +291,7 @@ public class Create {
                     public void onComplete() {
                         Log.d("lixiaowei", "onComplete------");
                     }
-                });
+                });*/
     }
 
 }

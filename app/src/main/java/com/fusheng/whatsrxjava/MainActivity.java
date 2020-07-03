@@ -47,22 +47,17 @@ import io.reactivex.disposables.Disposable;
 
 public class MainActivity extends AppCompatActivity {
 
-    private WebView webView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        Create create = new Create();
+        Create create = new Create();
        /* Transform transform = new Transform();
         Function function = new Function();*/
         Concat concat = new Concat();
 
-        setWebview();
         findViewById(R.id.tv_click).setOnClickListener(v -> {
-//            webView.loadUrl("https://www.baidu.com/");
-            webView.loadUrl("https://cpu.baidu.com/1022/f9a56ae8?scid=62996");
-            Log.d("lixiaowei", "isAllowed: ------------" + getVivoLockStatus(this));
+            create.intervalRange();
         });
         SlideLockView slideLockView = findViewById(R.id.slide_rail);
         slideLockView.setCallback(new SlideLockView.Callback() {
@@ -74,28 +69,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void setWebview() {
-        webView = findViewById(R.id.webview);
-//        webView.requestFocus();
-        WebSettings settings = webView.getSettings();
-        webView.setWebViewClient(new WebViewClient());
-        settings.setJavaScriptEnabled(true);
-       /* webView.setWebChromeClient(new MyWebChromeClient());
-        settings.setJavaScriptCanOpenWindowsAutomatically(true);//支持通过Javascript打开新窗口
-        settings.setJavaScriptEnabled(true);//设置WebView属性，能够执行Javascript脚本
-        settings.setUseWideViewPort(true);//将图片调整到适合webview的大小
-        settings.setLoadWithOverviewMode(true);// 缩放至屏幕的大小
-        settings.setDomStorageEnabled(true);//设置是否启用了DOM Storage API
-        settings.setDatabaseEnabled(true);//开启database storage API功能
-        settings.setTextZoom(100); //控制字体大小不随系统设置变化
-        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
-        //对接东方头条需要设置支持三方缓存，否则会判为作弊
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
-        }*/
-    }
-
 
     class MyWebChromeClient extends WebChromeClient {
 

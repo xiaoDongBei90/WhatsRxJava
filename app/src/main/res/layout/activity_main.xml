@@ -30,13 +30,6 @@
         tools:layout_editor_absoluteX="16dp"
         tools:text="记录卡时间分类时间分类看时间" />
 
-    <WebView
-        android:id="@+id/webview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_click" />
 
     <com.fusheng.whatsrxjava.SlideLockView
         android:id="@+id/slide_rail"
